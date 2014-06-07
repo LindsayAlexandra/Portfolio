@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Blanca Plata - Fine Art</title>
+<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+<link href='http://fonts.googleapis.com/css?family=Syncopate:400,700' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/script.js"></script>
+<script type="text/javascript">
+function cycleImages(){
+      var $active = $('#cycler .active');
+      var $next = ($active.next().length > 0) ? $active.next() : $('#cycler img:first');
+      $next.css('z-index',2);//move the next image up the pile
+      $active.fadeOut(1500,function(){//fade out the top image
+	  $active.css('z-index',1).show().removeClass('active');//reset the z-index and unhide the image
+          $next.css('z-index',3).addClass('active');//make the next image the top one
+      });
+    }
+
+$(document).ready(function(){
+// run every 7s
+setInterval('cycleImages()', 7000);
+})
+
+</script>
+
+
+</head>
+
+<body>
+<div id="wrapper">
+<header>Blanca Plata - Fine Art</header>
+<div id="menu-container">
+<ul id="navigationMenu">
+<li> <a href="#" class="selectedMenu">Home</a></li>
+<li><a href="#" class="normalMenu">About</a></li>
+<li><a href="fine_art.html" class="normalMenu">Fine Art</a></li>
+<li><a href="makeup.html" class="normalMenu">Makeup</a></li>
+<li><a href="sneakers.html" class="normalMenu">Sneakers</a></li>
+<li><a href="dolls.html" class="normalMenu">Dolls</a></li>
+<li><a href="#" class="normalMenu">Exhibitions</a></li>
+<li><a href="#" class="normalMenu">Shop</a></li>
+<li><a href="#" class="normalMenu">Contact</a></li>
+<li><a href="#" class="normalMenu">Blog</a></li>
+</ul>
+</div>
+<div id="content">
+
+<div id="cycler">
+<img src="images/assets/fine_art/LadyRaven_Digital-2012_600x450.fw.png" class="active" width="600" height="450" alt=""/>
+<img src="images/assets/makeup/ZombieWoman3_600x450.fw.png" width="600" height="450" alt=""/>
+<img src="images/assets/dolls/Ooak_Monster_High_Doll_600x450.fw.png" width="600" height="450" alt=""/>
+<img src="images/assets/sneakers/Geisha_600x450.fw.png" width="600" height="450" alt=""/>
+<img src="images/assets/fine_art/LovingTheFrog_OilOnSilverLeaf-2012_600x450.fw.png" width="600" height="450" alt=""/>
+</div>
+</div>
+<footer>Copyright &copy; 2014 Website Designed & Developed By Lindsay Dealy</footer>
+</div>
+</body>
+</html>

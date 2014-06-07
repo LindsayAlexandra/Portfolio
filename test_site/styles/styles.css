@@ -1,0 +1,313 @@
+/* Page styles */
+
+body, h1, h2, h3, p, td, quote, small, form, input, ul, li, ol, label {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	margin-top: 20px;
+	height: 100%;
+	background-color: white;
+}
+header {
+	font-family: 'Syncopate', 'sans-serif';
+	color: black;
+	font-size: 24px;
+	font-weight: bold;
+	margin-left: 15%;
+	margin-top: 3%;
+}
+footer {
+	text-align: center;
+	font-family: 'Syncopate', 'sans-serif';
+	color: black;
+	font-size: 14px;
+	margin-top: 55%;
+}
+/* Navigation menu styles */
+
+ul {
+	height: 50px;
+	font-family: 'Syncopate', 'sans-serif';
+	font-size: 14px;
+	margin-left: 15%;
+	margin-top: 1%;
+}
+ul li {
+	display: inline-block;
+	float: left;
+	height: 25px;
+	list-style-type: none;
+	overflow: hidden;
+}
+ul li a, ul li a:hover, ul li a:visited {
+	text-decoration: none;
+}
+.normalMenu, .normalMenu:visited, .hoverMenu, .hoverMenu:visited, .selectedMenu, .selectedMenu:visited {
+	outline: none;
+	padding: 5px 10px;
+	display: block;
+}
+.hoverMenu, .hoverMenu:visited, .selectedMenu, .selectedMenu:visited {
+	margin-top: -25px;
+	background-color: #C0C0C0;
+	color: #000000;
+}
+.selectedMenu, .selectedMenu:visited {
+	margin: 0;
+}
+.normalMenu, .normalMenu:visited {
+	color: white;
+	background-color: #000000;
+}
+/*home page jQuery*/
+
+#cycler {
+	margin-top: 3%;
+	margin-left: 28%;
+	position: relative;
+	margin-bottom: 3%;
+}
+#cycler img {
+	position: absolute;
+	z-index: 1;
+	box-shadow: 3px 3px 3px #2C2C2C;
+}
+#cycler img.active {
+	z-index: 3
+}
+/*Gallery for sneakers*/
+.gallery {
+	padding-top: 2em;
+	margin-left: 3%;
+	list-style-type: none;
+	margin-bottom: -37%;
+}
+.gallery img {
+	padding: 3px;
+	box-shadow: 3px 3px 3px #858585;
+}
+.gallery figure {
+	display: inline-block;
+	margin: 0;
+	position: relative;
+}
+figcaption {
+	position: absolute;
+	top: 15%;
+	bottom: 15%;
+	left: 0;
+	right: 0;
+	background-color: rgba(131,225,255,1);
+	padding: 10px;
+	font-family: 'Syncopate', 'sans-serif';
+	font-weight: 200;
+	font-size: 12px;
+	opacity: 0;
+	-webkit-transition: opacity .75s ease-out;
+	-moz-transition: opacity .75s ease-out;
+	-o-transition: opacity .75s ease-out;
+	transition: opacity .75s ease-out;
+	text-align: center;
+	height: 25px;
+	width: 150px;
+}
+figure:hover figcaption {
+	opacity: 1;
+}
+
+/* fine-art page */
+
+#art {
+	margin-top: 3%;
+	margin-left: 28%;
+	margin-bottom: 3%;
+	position: relative;
+}
+#art img {
+	position: absolute;
+	z-index: 1;
+	box-shadow: 3px 3px 3px #2C2C2C;
+}
+#art img.active {
+	z-index: 3
+}
+
+/* dolls */
+
+/* css3 photo gallery styles */
+.dolls {
+    width:610px;
+    margin-top: 3%;
+	margin-left: 28%;
+	margin-bottom: -40%;
+}
+.dolls a {
+    display:inline-block;
+    height:150px;
+    position:relative;
+    width:200px;
+}
+.dolls a img {
+    border:5px solid #3B3B3B;
+	box-shadow: 3px 3px 3px #3B3B3B;
+    cursor:pointer;
+    display:block;
+    height:100%;
+    left:0px;
+    position:absolute;
+    top:0px;
+    width:100%;
+    z-index:1;
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+
+    -webkit-transition-property:width, height, top, bottom, left, right, z-index, border;
+    -webkit-transition-duration:0.5s;
+    -moz-transition-property:width, height, top, bottom, left, right, z-index, border;
+    -moz-transition-duration:0.5s;
+    -o-transition-property:width, height, top, bottom, left, right, z-index, border;
+    -o-transition-duration:0.5s;
+    transition-property:width, height, top, bottom, left, right, z-index, border;
+    transition-duration:0.5s;
+}
+.dolls a:focus img {
+    border:15px solid #3B3B3B;
+    cursor:default;
+    height:250%;
+    position:absolute;
+    width:250%;
+    z-index:25;
+
+    box-shadow:1px 1px 5px #888;
+    -moz-box-shadow:1px 1px 5px #888;
+    -webkit-box-shadow:1px 1px 5px #888;
+    -webkit-transition-property:width, height, top, bottom, left, right, z-index, border;
+    -webkit-transition-duration:0.5s;
+    -moz-transition-property:width, height, top, bottom, left, right, z-index, border;
+    -moz-transition-duration:0.5s;
+    -o-transition-property:width, height, top, bottom, left, right, z-index, border;
+    -o-transition-duration:0.5s;
+    transition-property:width, height, top, bottom, left, right, z-index, border;
+    transition-duration:0.5s;
+}
+
+/* custom focus rules */
+.dolls a:focus:nth-child(3n+1) img {
+left:150px;
+}
+.dolls a:focus:nth-child(3n+2) img {
+    left:-50px;
+}
+.dolls a:focus:nth-child(3n+3) img {
+    left:-250px;
+}
+.dolls a:focus:nth-child(-n+3) img {
+    top:140px;
+}
+.dolls a:focus:nth-child(n+7) img {
+    top:-150px;
+}
+.dolls a:focus:nth-child(n+10) img {
+    top:-295px;
+}
+
+/* extra close layer */
+.dolls .close {
+    background:transparent;
+    cursor:pointer;
+    display:none;
+    height:352px;
+    left:170px;
+    position:absolute;
+    top:160px;
+    width:500px;
+    z-index:30;
+}
+.dolls a:focus ~ .close {
+    display:block;
+}
+
+/* makeup carousel */
+
+.wrap {
+	width: 100%;
+	height: 400px;
+	margin-top: -200px;
+	overflow: hidden;
+	position: absolute;
+	/*left: 0;*/
+	top: 50%;
+	background-color: white;
+	/*margin-left: 6.5em;*/
+}
+#carousel div {
+	width: 554px;
+	height: 313px;
+	margin: 20px 30px;
+	float: left;
+	position: relative;
+	background-color: white;
+}
+#carousel div.selected {
+	box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+}
+#carousel div img {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+#carousel div span {
+	color: black;
+	font-family: 'Syncopate', 'sans-serif';
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	display: block;
+	width: 100%;
+	height: 50px;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 3%;
+	bottom: 0;
+	z-index: 8;
+}
+#prev, #next {
+	background: center center no-repeat transparent;
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin-top: -30px;
+	position: absolute;
+	top: 50%;
+	z-index: 5;
+}
+#prev:hover, #next:hover {
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 5px;
+}
+#prev.disabled, #next.disabled {
+	opacity: 0.2;
+	cursor: default;
+}
+#prev.disabled:hover, #next.disabled:hover {
+	background-color: transparent;
+}
+#prev {
+	background-image: url(../images/img/dark_arrow_left.fw.png);
+	left: 50%;
+	margin-left: -320px;
+}
+#next {
+	background-image: url(../images/img/dark_arrow_right.fw.png);
+	right: 50%;
+	margin-right: -320px;
+}

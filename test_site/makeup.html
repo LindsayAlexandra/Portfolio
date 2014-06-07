@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Blanca Plata - Fine Art</title>
+<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+<link href='http://fonts.googleapis.com/css?family=Syncopate:400,700' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script src="scripts/jquery.carouFredSel-6.0.4-packed.js"></script>
+<script type="text/javascript" src="scripts/script.js"></script>
+<script type="text/javascript">
+			function openItem( $item ) {
+				$item.find( 'img[src*="-bw"]' ).stop().fadeTo( 1500, 0 );
+				$item.addClass( 'selected' );
+				$item.stop().animate({
+					height: 363
+				});
+				$('body').css( 'backgroundColor', $item.css( 'backgroundColor' ) );
+			}
+
+			$(function() {
+				$('#carousel').carouFredSel({
+					circular: false,
+					infinite: false,
+					width: '100%',
+					height: 405,
+					items: 3,
+					auto: false,
+					prev: '#prev',
+					next: '#next',
+					scroll: {
+						items: 1,
+						duration: 1000,
+						easing: 'quadratic',
+						onBefore: function( data ) {
+							data.items.old.find( 'img[src*="-bw"]' ).stop().fadeTo( 500, 1 );
+							data.items.old.removeClass( 'selected' );
+							data.items.old.stop().animate({
+								height: 313
+							});
+							$('body').css( 'backgroundColor', '#white' );
+						},
+						onAfter: function( data ) {
+							openItem( data.items.visible.eq( 1 ) );
+						}
+					},
+					onCreate: function( data ) {
+						openItem( data.items.eq( 1 ) );
+					}
+				});
+			});
+		</script>
+</head>
+
+<body>
+<div id="wrapper">
+<header>Blanca Plata - Fine Art</header>
+<div id="menu-container">
+<ul id="navigationMenu">
+<li> <a href="index.html" class="normalMenu">Home</a></li>
+<li><a href="#" class="normalMenu">About</a></li>
+<li><a href="fine_art.html" class="normalMenu">Fine Art</a></li>
+<li><a href="#" class="selectedMenu">Makeup</a></li>
+<li><a href="sneakers.html" class="normalMenu">Sneakers</a></li>
+<li><a href="dolls.html" class="normalMenu">Dolls</a></li>
+<li><a href="#" class="normalMenu">Exhibitions</a></li>
+<li><a href="#" class="normalMenu">Shop</a></li>
+<li><a href="#" class="normalMenu">Contact</a></li>
+<li><a href="#" class="normalMenu">Blog</a></li>
+</ul>
+</div>
+<div class="wrap">
+ <div id="carousel">
+            <div class="empty"></div>
+            <div> <img src="images/assets/makeup/WhiteFairy_554x313.jpg" width="554" height="313" alt=""/> <img src="images/assets/makeup/WhiteFairy_554x313-bw.jpg" width="554" height="313" alt=""/> <span>Photography by Shealyn Stout</span> </div>
+            <div> <img src="images/assets/makeup/RedHair_Doll_554x313.jpg" width="554" height="313" alt=""/> <img src="images/assets/makeup/RedHair_Doll_554x313-bw.jpg" width="554" height="313" alt=""/> <span>Photography by Shealyn Stout</span></div>
+            <div> <img src="images/assets/makeup/RedHair_Doll2_554x313.jpg" width="554" height="313" alt=""/> <img src="images/assets/makeup/RedHair_Doll2_554x313-bw.jpg" width="554" height="313" alt=""/> <span>Photography by Shealyn Stout</span> </div>
+            <div> <img src="images/assets/makeup/PinkFairy_554x313.jpg" width="554" height="313" alt=""/> <img src="images/assets/makeup/PinkFairy_554x313-bw.jpg" width="554" height="313" alt=""/> <span>Photography by Shealyn Stout</span> </div>
+            <div> <img src="images/assets/makeup/Faries_554x313.jpg" width="554" height="313" alt=""/> <img src="images/assets/makeup/Faries_554x313-bw.jpg" width="554" height="313" alt=""/> <span>Photography by Shealyn Stout</span> </div>
+            <div> <img src="images/assets/makeup/BlueFairy_554x313.jpg" width="554" height="313" alt=""/> <img src="images/assets/makeup/BlueFairy_554x313-bw.jpg" width="554" height="313" alt=""/> <span>Photography by Shealyn Stout</span> </div>
+            <div> <img src="images/assets/makeup/Blonde_Doll_554x313.jpg" width="554" height="313" alt=""/> <img src="images/assets/makeup/Blonde_Doll_554x313-bw.jpg" width="554" height="313" alt=""/> <span>Photography by Shealyn Stout</span> </div>
+            <div> <img src="images/assets/makeup/Blonde_Doll2_554x313.jpg" width="554" height="313" alt=""/> <img src="images/assets/makeup/Blonde_Doll2_554x313-bw.jpg" width="554" height="313" alt=""/> <span>Photography by Shealyn Stout</span> </div>
+            <div> <img src="images/assets/makeup/ZombieWoman5_554x313.jpg" width="554" height="313" alt=""/> <img src="images/assets/makeup/ZombieWoman5_554x313-bw.jpg" width="554" height="313" alt=""/> <span>Photography by Shealyn Stout</span> </div>
+            <div> <img src="images/assets/makeup/ZombieWoman4_554x313.jpg" width="554" height="313" alt=""/> <img src="images/assets/makeup/ZombieWoman4_554x313-bw.jpg" width="554" height="313" alt=""/> <span>Photography by Shealyn Stout</span> </div>
+            <div> <img src="images/assets/makeup/ZombieWoman3_554x313.jpg" width="554" height="313" alt=""/> <img src="images/assets/makeup/ZombieWoman3_554x313-bw.jpg" width="554" height="313" alt=""/> <span>Photography by Shealyn Stout</span> </div>
+            <div> <img src="images/assets/makeup/ZombieWoman2_554x313.jpg" width="554" height="313" alt=""/> <img src="images/assets/makeup/ZombieWoman2_554x313-bw.jpg" width="554" height="313" alt=""/> <span>Photography by Shealyn Stout</span> </div>
+            <div> <img src="images/assets/makeup/ZombieWoman1.jpg" width="554" height="313" alt=""/> <img src="images/assets/makeup/ZombieWoman1-bw.jpg" width="554" height="313" alt=""/> <span>Photography by Shealyn Stout</span> </div>
+            <div> <img src="images/assets/makeup/ZombieMan_554x313.jpg" width="554" height="313" alt=""/> <img src="images/assets/makeup/ZombieMan_554x313-bw.jpg" width="554" height="313" alt=""/> <span>Photography by Shealyn Stout</span> </div>
+            <div> <img src="images/assets/makeup/ZombieGroup_554x313.jpg" width="554" height="313" alt=""/> <img src="images/assets/makeup/ZombieGroup_554x313-bw.jpg" width="554" height="313" alt=""/> <span>Photography by Shealyn Stout</span> </div>
+            <div class="empty"></div>
+          </div>
+          <a id="prev" href="#"></a> <a id="next" href="#"></a> </div>
+<footer>Copyright &copy; 2014 Website Designed & Developed By Lindsay Dealy</footer>
+</div>
+</body>
+</html>
